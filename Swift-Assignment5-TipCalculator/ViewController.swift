@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     
+    @IBOutlet var autoCalculation: UISwitch!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var tipAmount: UILabel!
     @IBOutlet var billAmount: UITextField!
@@ -72,11 +73,8 @@ class ViewController: UIViewController {
 
     @IBAction func clickedCalculate(_ sender: Any) {
         if isValidInput() {
-            let billAmountD = Double((billAmount?.text)!)
-            let tipAmountD: Double = Double(billAmountD!) * Double(Int(tipPercentageSlider.value)) / 100
-            tipAmount.text = "$" + String(format: "%.2f", tipAmountD)
+            calculateTip()
         }
-        
     }
     
     func isValidInput() -> Bool {
@@ -95,8 +93,15 @@ class ViewController: UIViewController {
         return true
     }
     
+    func calculateTip() {
+        let billAmountD = Double((billAmount?.text)!)
+        let tipAmountD: Double = Double(billAmountD!) * Double(Int(tipPercentageSlider.value)) / 100
+        tipAmount.text = "$" + String(format: "%.2f", tipAmountD)
+    }
+    
     @IBAction func changedSlider(_ sender: Any) {
         updatePercentage()
+        checkAutoCalculation()
     }
     
     func updatePercentage() {
@@ -118,6 +123,8 @@ class ViewController: UIViewController {
             if billAmtText.isEmpty {
                 billAmount.text = defaultBillAmt
                 billAmount.textColor = defaultTextFieldUIColor
+            } else {
+                checkAutoCalculation()
             }
         }
     }
@@ -134,5 +141,11 @@ class ViewController: UIViewController {
         
         tipPercentageSlider.value = Float(tipPercentage.text!)!
         tipPercentage.text = tipPercentage.text! + "%"
+    }
+    
+    func checkAutoCalculation() {
+        if autoCalculation.isOn {
+            calculateTip()
+        }
     }
 }

@@ -20,22 +20,36 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="fYc-hB-V7l">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="476"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="547"/>
                                         <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EdV-FG-4Xc">
+                                                <rect key="frame" x="41.333333333333343" y="0.0" width="331.33333333333326" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto Calculation" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PC8-pQ-JMa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="272.33333333333331" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sds-50-qtb">
+                                                        <rect key="frame" x="282.33333333333337" y="0.0" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$Tip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXI-yr-g7r">
-                                                <rect key="frame" x="177.33333333333334" y="0.0" width="59.333333333333343" height="36"/>
+                                                <rect key="frame" x="177.33333333333334" y="71" width="59.333333333333343" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTs-by-fn0">
-                                                <rect key="frame" x="41.333333333333343" y="76" width="331.33333333333326" height="24"/>
+                                                <rect key="frame" x="41.333333333333343" y="147" width="331.33333333333326" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bill Amount" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xpv-kD-si3">
-                                                <rect key="frame" x="41.333333333333343" y="140" width="331.33333333333326" height="40"/>
+                                                <rect key="frame" x="41.333333333333343" y="211" width="331.33333333333326" height="40"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -45,20 +59,20 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Percentage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXp-q5-YJF">
-                                                <rect key="frame" x="41.333333333333343" y="220" width="331.33333333333326" height="24"/>
+                                                <rect key="frame" x="41.333333333333343" y="291" width="331.33333333333326" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8zY-Sr-EJd">
-                                                <rect key="frame" x="39.333333333333343" y="284" width="335.33333333333326" height="31"/>
+                                                <rect key="frame" x="39.333333333333343" y="355" width="335.33333333333326" height="31"/>
                                                 <color key="tintColor" systemColor="systemTealColor"/>
                                                 <connections>
                                                     <action selector="changedSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="gkD-BG-S68"/>
                                                 </connections>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Seleted %" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rKM-x3-hBU">
-                                                <rect key="frame" x="41.333333333333343" y="354" width="331.33333333333326" height="40"/>
+                                                <rect key="frame" x="41.333333333333343" y="425" width="331.33333333333326" height="40"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -68,7 +82,7 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5LC-hj-1ms">
-                                                <rect key="frame" x="41.333333333333343" y="434" width="331.33333333333326" height="42"/>
+                                                <rect key="frame" x="41.333333333333343" y="505" width="331.33333333333326" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,12 +98,13 @@
                                             <constraint firstItem="FXp-q5-YJF" firstAttribute="width" secondItem="fYc-hB-V7l" secondAttribute="width" multiplier="0.8" id="Lhe-cX-SAe"/>
                                             <constraint firstItem="rKM-x3-hBU" firstAttribute="width" secondItem="fYc-hB-V7l" secondAttribute="width" multiplier="0.8" id="TcE-eO-248"/>
                                             <constraint firstItem="8zY-Sr-EJd" firstAttribute="width" secondItem="fYc-hB-V7l" secondAttribute="width" multiplier="0.8" id="e0i-3u-YLZ"/>
+                                            <constraint firstItem="EdV-FG-4Xc" firstAttribute="width" secondItem="fYc-hB-V7l" secondAttribute="width" multiplier="0.8" id="rpM-SZ-zyg"/>
                                             <constraint firstItem="5LC-hj-1ms" firstAttribute="width" secondItem="fYc-hB-V7l" secondAttribute="width" multiplier="0.8" id="vLz-or-Req"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="fYc-hB-V7l" firstAttribute="bottom" secondItem="EJ2-Wp-t6X" secondAttribute="bottom" id="7Ex-oi-4I0"/>
+                                    <constraint firstItem="fYc-hB-V7l" firstAttribute="bottom" secondItem="EJ2-Wp-t6X" secondAttribute="bottom" constant="-50" id="7Ex-oi-4I0"/>
                                     <constraint firstItem="fYc-hB-V7l" firstAttribute="trailing" secondItem="EJ2-Wp-t6X" secondAttribute="trailing" id="Hug-Jm-qei"/>
                                     <constraint firstItem="fYc-hB-V7l" firstAttribute="top" secondItem="EJ2-Wp-t6X" secondAttribute="top" constant="50" id="fgL-2e-mrx"/>
                                     <constraint firstItem="fYc-hB-V7l" firstAttribute="leading" secondItem="EJ2-Wp-t6X" secondAttribute="leading" id="iGH-Y0-14z"/>
@@ -110,6 +125,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="autoCalculation" destination="sds-50-qtb" id="Sjy-vI-eJE"/>
                         <outlet property="billAmount" destination="xpv-kD-si3" id="Clz-4H-VDk"/>
                         <outlet property="calculateBtn" destination="5LC-hj-1ms" id="PGt-rd-H9C"/>
                         <outlet property="scrollView" destination="4Ax-mg-s1x" id="Ycj-WD-NT5"/>
