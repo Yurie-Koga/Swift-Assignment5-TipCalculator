@@ -1,3 +1,3 @@
 # Swift-Assignment5 Tip Calculator
 
-![Demo](demo/demo.gif)
+![Demo](demo/demo2.gif)
