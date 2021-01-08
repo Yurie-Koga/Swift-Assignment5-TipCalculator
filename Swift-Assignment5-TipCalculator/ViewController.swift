@@ -94,9 +94,12 @@ class ViewController: UIViewController {
     }
     
     func calculateTip() {
-        let billAmountD = Double((billAmount?.text)!)
-        let tipAmountD: Double = Double(billAmountD!) * Double(Int(tipPercentageSlider.value)) / 100
-        tipAmount.text = "$" + String(format: "%.2f", tipAmountD)
+        if let billAmount = billAmount.text {
+            if billAmount.lowercased() != defaultBillAmt.lowercased() {
+                let tipAmountD: Double = Double(billAmount)! * Double(Int(tipPercentageSlider.value)) / 100
+                tipAmount.text = "$" + String(format: "%.2f", tipAmountD)
+            }
+        }
     }
     
     @IBAction func changedSlider(_ sender: Any) {
@@ -141,6 +144,7 @@ class ViewController: UIViewController {
         
         tipPercentageSlider.value = Float(tipPercentage.text!)!
         tipPercentage.text = tipPercentage.text! + "%"
+        checkAutoCalculation()
     }
     
     func checkAutoCalculation() {
